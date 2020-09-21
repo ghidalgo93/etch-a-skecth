@@ -1,0 +1,16 @@
+.contents {
+	display: flex;
+	flex-direction: column;
+}
+
+.clearBtn {
+	width: max-content;
+	align-self: flex-end;
+}
+
+.canvas {
+	background: LightGray;
+	display: grid;
+	grid-template-columns: repeat(16, 20px);
+	grid-template-rows: repeat(16, 20px);
+}
