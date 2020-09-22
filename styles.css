@@ -1,16 +1,36 @@
-.contents {
+body {
+	margin: 2rem;
+	font: 12px system-ui;
+}
+
+#contents {
+	height: 100%;
+	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 }
 
-.clearBtn {
-	width: max-content;
+#header {
 	align-self: flex-end;
+	display: flex;
 }
 
-.canvas {
-	background: LightGray;
-	display: grid;
-	grid-template-columns: repeat(16, 20px);
-	grid-template-rows: repeat(16, 20px);
+#welcomeLine {
+	align-self: center;
+}
+
+#canvasContainer {
+	align-self: center;
+}
+
+#canvas {
+	grid-gap: 0.5rem;
+}
+
+.cell {
+	border: 1rem gray solid;
+}
+
+.drawn {
+	border: 1rem aquamarine solid;
 }
