@@ -14,6 +14,8 @@ function createGrid(gridContainer, columns, rows){
 // input: the html element to become grid container, number of columns, number of rows
 function layoutGrid(gridContainer, columns, rows){
 	gridContainer.style.display = 'grid';
+	//gridContainer.style.gridTemplateColumns = `repeat(${columns},${100/columns}%)`;
+	//gridContainer.style.gridTemplateRows = `repeat(${rows}, ${100/rows}%)`;
 	gridContainer.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
 	gridContainer.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
 	return;

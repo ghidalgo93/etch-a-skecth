@@ -1,5 +1,5 @@
 html {
-	height: 100%;
+	height: 90%;
 }
 
 body {
@@ -23,18 +23,18 @@ body {
 	align-self: center;
 }
 
-#canvasContainer {
-	margin: auto;
-}
-
 #canvas {
-	grid-gap: 0.5rem;
+	margin: auto;
+//	gap: 0.2rem;
+	height: 80%;
+	width: 80%
 }
 
 .cell {
-	border: 1rem gray solid;
+	background: grey;
+	border: 1px darkgrey solid;
 }
 
 .drawn {
-	border: 1rem aquamarine solid;
+	background: aquamarine;
 }
