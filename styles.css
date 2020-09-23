@@ -5,6 +5,7 @@ html {
 
 body {
 	height: 100%;
+//	background-color: powderblue;
 }
 
 #contents {
@@ -45,17 +46,8 @@ button:hover {
 
 #canvas {
 	margin: auto;
-	height: 80%;
-	width: 80%
-}
-
-.cell {
-	background: grey;
-	border: 1px darkgrey solid;
-}
-
-.drawn {
-	background: aquamarine;
+	height: 60em;
+	width: 60em;
 }
 
 footer{

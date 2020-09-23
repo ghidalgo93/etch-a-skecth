@@ -37,8 +37,7 @@ function fillGrid(gridContainer, columns, rows){
 
 function clearCells(e){
 	const cells = document.querySelectorAll('.cell');
-	//cells.forEach(cell => cell.classList.remove('drawn'));
-	cells.forEach(cell => cell.style.background = "grey");
+	cells.forEach(cell => cell.style.background = bgColor);
 }
 
 function removeAllChildNodes(parent){
@@ -57,7 +56,7 @@ function newCanvas(e){
 
 function drawCell(e){
 	if (!partyStatus){
-		this.style.background = 'aquamarine';
+		this.style.background ='black';
 	}
 	else{
 		this.style.background = randomRGB();
@@ -76,7 +75,6 @@ function togglePartyMode(e){
  	partyStatus = !partyStatus;
 	if (!partyStatus){
 		this.style.backgroundColor = 'white';
-//		this.classList.add('button:hover');
 	}
 	else{
 		this.style.backgroundColor = randomRGB();
@@ -91,6 +89,10 @@ function togglePartyMode(e){
 let rows = 16;
 let columns = 16;
 let partyStatus = false;
+let bgColor = 'powderblue';
+
+const body = document.querySelector('body');
+body.style.backgroundColor = bgColor; 
 
 const canvas = document.querySelector('#canvas');
 createGrid(canvas, columns, rows);
