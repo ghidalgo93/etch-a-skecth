@@ -1,10 +1,9 @@
 html {
-	height: 90%;
+	height: 100%;
+	font: 12px Arial, sans-serif;
 }
 
 body {
-	margin: 2rem;
-	font: 12px system-ui;
 	height: 100%;
 }
 
@@ -17,6 +16,7 @@ body {
 #header {
 	align-self: flex-end;
 	display: flex;
+	margin: 2em;
 }
 
 #welcomeLine {
@@ -25,7 +25,6 @@ body {
 
 #canvas {
 	margin: auto;
-//	gap: 0.2rem;
 	height: 80%;
 	width: 80%
 }
@@ -37,4 +36,8 @@ body {
 
 .drawn {
 	background: aquamarine;
+}
+
+footer{
+	align-self: center; 
 }
