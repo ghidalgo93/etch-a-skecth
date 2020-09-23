@@ -37,7 +37,8 @@ function fillGrid(gridContainer, columns, rows){
 
 function clearCells(e){
 	const cells = document.querySelectorAll('.cell');
-	cells.forEach(cell => cell.classList.remove('drawn'));
+	//cells.forEach(cell => cell.classList.remove('drawn'));
+	cells.forEach(cell => cell.style.background = "grey");
 }
 
 function removeAllChildNodes(parent){
@@ -55,7 +56,31 @@ function newCanvas(e){
 }
 
 function drawCell(e){
-	this.classList.add('drawn');
+	if (!partyStatus){
+		this.style.background = 'aquamarine';
+	}
+	else{
+		this.style.background = randomRGB();
+	}
+	return;
+}
+
+function randomRGB(){
+	let R = Math.floor(Math.random() * 255);
+	let G = Math.floor(Math.random() * 255);
+	let B = Math.floor(Math.random() * 255);
+	return `rgb(${R},${G},${B})`;
+}
+
+function togglePartyMode(e){
+ 	partyStatus = !partyStatus;
+	if (!partyStatus){
+		this.style.backgroundColor = 'white';
+//		this.classList.add('button:hover');
+	}
+	else{
+		this.style.backgroundColor = randomRGB();
+	}
 	return;
 }
 
@@ -65,6 +90,7 @@ function drawCell(e){
 //####### START OF SCRIPT ########
 let rows = 16;
 let columns = 16;
+let partyStatus = false;
 
 const canvas = document.querySelector('#canvas');
 createGrid(canvas, columns, rows);
@@ -80,5 +106,8 @@ const newCanvasButton = document.querySelector('#newCanvasBtn');
 newCanvasButton.addEventListener('click', function() {
 	newCanvas(canvas);	
 });
+
+const partyModeButton = document.querySelector('#partyModeBtn');
+partyModeButton.addEventListener('click', togglePartyMode); 
 
 
